@@ -3,11 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Simple TODO App</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>This is a heading for Netlify deployment</h1>
-    <p>Netlify is a great tool for deployment</p>
-    <p>Made changes on 6.2.2025</p>
+    <div class="container">
+        <h1>TODO List</h1>
+        <form id="todo-form">
+          <input type="text" id="todo-input" placeholder="Enter a new task">
+          <button type="submit">Add Task</button>
+        </form>
+        <div id="error-message" class="error"></div>
+        <ul id="todo-list"></ul>
+        <div class="filters">
+          <button id="show-all">Show All</button>
+          <button id="show-active">Show Active</button>
+          <button id="show-completed">Show Completed</button>
+        </div>
+        <div id="counter">Open tasks: <span id="open-count">0</span></div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
